@@ -1,6 +1,6 @@
 # Assets2Packages
 
-![Image1](https://raw.githubusercontent.com/kakunpc/Assets2Packages/master/img/Assets2Packages.gif "Assets2Packages")
+![Image1](https://raw.githubusercontent.com/kakunpc/Assets2Packages/master/Images/Assets2Packages.gif "Assets2Packages")
 
 Assets にある物を、ディレクトリごとPackagesに移動させる事ができるEditor拡張
 
