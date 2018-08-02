@@ -1,0 +1,11 @@
+{
+  "category": "Unity",
+  "description": "",
+  "displayName": "Assets2Packages",
+  "keywords": [
+    ""
+  ],
+  "name": "com.kakunpc.assets2package",
+  "unity": "2018.2",
+  "version": "1.0.0"
+}
