@@ -5,7 +5,7 @@
 Assets にある物を、ディレクトリごとPackagesに移動させる事ができるEditor拡張
 
 # 使い方
-1. `Packages/manifest.json` を開き、dependenciesの中に `"com.kakunpc.assets2package": "git://github.com/kakunpc/Assets2Packages.git"` を追記します。
+1. `Packages/manifest.json` を開き、dependenciesの中に `"com.kakunpc.assets2package": "https://github.com/kakunpc/Assets2Packages.git"` を追記します。
 1. Unityを起動します。
 1. メニューの Window -> Assets2Packages を選択します。
 1. 設定項目を入力して、 `Move Start` をクリック
