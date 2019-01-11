@@ -1,14 +1,11 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Packages.Assets2Packages.Editor
 {
-#if UNITY_2018_2_OR_NEWER
-
-    public class Assets2Packages : EditorWindow
+    public class MoveWindow  : EditorWindow
     {
         const string SamplePackage = "com.unity.sample";
 
@@ -24,16 +21,14 @@ namespace Packages.Assets2Packages.Editor
         [MenuItem("Window/Assets 2 Packages")]
         static void Init()
         {
-            var window = (Assets2Packages)GetWindow(typeof(Assets2Packages));
+            var window = (MoveWindow) GetWindow(typeof(MoveWindow));
             window.Show();
             window.titleContent = new GUIContent("Assets 2 Packages");
         }
 
         bool CheckSettings()
         {
-            return folder != null &&
-                   string.IsNullOrEmpty(packageName) == false &&
-                   packageName != SamplePackage;
+            return folder != null && string.IsNullOrEmpty(packageName) == false && packageName != SamplePackage;
         }
 
         void OnGUI()
@@ -73,8 +68,7 @@ namespace Packages.Assets2Packages.Editor
 
             var packageDirectory = Path.Combine(Application.dataPath, $"../Packages/{packageName}");
 
-            var path = Path.Combine(Application.dataPath,
-                AssetDatabase.GetAssetPath(folder).Substring("Assets/".Length));
+            var path = Path.Combine(Application.dataPath, AssetDatabase.GetAssetPath(folder).Substring("Assets/".Length));
 
             Directory.Move(path, packageDirectory);
 
@@ -82,22 +76,11 @@ namespace Packages.Assets2Packages.Editor
             {
                 writer.WriteLine(json);
             }
+
             AssetDatabase.Refresh();
             Close();
         }
 
-        [Serializable]
-        public class UnityPackageInfo
-        {
-            public string category;
-            public string description;
-            public string displayName;
-            public string[] keywords;
-            public string name;
-            public string unity;
-            public string version;
-        }
+    
     }
-
-#endif
 }
