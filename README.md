@@ -12,7 +12,7 @@ Assets にある物を、ディレクトリごとPackagesに移動させる事�
 1. 設定項目を入力して、 `Move Start` をクリック
 
 # 動作環境
-- Unity2018.2
+- Unity2018.3
 - .NET 4.x Equivalent
 
 # LICENSE
